@@ -20,3 +20,16 @@
  8. git pull origin <branch> - Pull changes from the remote repository.
  9. git branch - List branches.
  10. git checkout -b <branch> - Create and switch to a new branch.
+
+# Modules:
+## Use 'modules.exports = {func1, func2,...}' to export from a file and Use 'const {func1, func2,...}=require('./dirName/file.js')' to import and use it
+
+# fs Module:
+ 1. Read File -	fs.readFileSync(),	fs.readFile()
+ 2. Write File -	fs.writeFileSync(),	fs.writeFile()
+ 3. Append to File -	fs.appendFileSync(),	fs.appendFile()
+ 4. Delete File -	fs.unlinkSync(),	fs.unlink()
+ 5. Create Directory -	fs.mkdirSync(),	fs.mkdir()
+ 6. Read Directory -	fs.readdirSync(),	fs.readdir()
+ 7. Delete Directory -	fs.rmdirSync(),	fs.rmdir()
+ 8. Check Stats -	fs.statSync(),	fs.stat()
