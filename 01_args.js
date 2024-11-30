@@ -18,5 +18,5 @@ greeting();
     arguments passed to the Node.js script.The first two elements of 
     the array are: Path to the Node.js executable and Path to the executed script.
 
-    Run: npm run args vinit -> to run the script define in package.json
+    Run: npm run args ____ -> to run the script define in package.json
 */
