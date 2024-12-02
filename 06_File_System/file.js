@@ -1,5 +1,5 @@
 const fs = require("fs");
-// The sync fs methods can bs stored into a variable
+// The sync fs methods can be stored into a variable
 // While the async methods uses a callback function to operate
 // console.log(fs); // lists all the possible methods for fs
 
@@ -64,7 +64,7 @@ fs.stat("./example.txt", (err, stats) => {
 
 // 5. Deleting a file
 
-// 1. Create a file and delete it
+// a. Create a file and delete it
 fs.writeFile("./delete.txt", "This is going to be deleted...", (err) => {
   if (err) {
     console.log(err);
@@ -75,7 +75,7 @@ fs.writeFile("./delete.txt", "This is going to be deleted...", (err) => {
       fs.readFileSync("./delete.txt", "utf-8")
     );
 
-    // Delete the file
+    // b. Delete the file
     fs.unlink("./delete.txt", (err) => {
       if (err) {
         console.log(err);
@@ -101,7 +101,7 @@ fs.mkdir("./newDir2", (err) => {
         if (err) {
           console.log(err);
         } else {
-          console.log("File created in newDir");
+          console.log("File created in newDir2");
 
           // Read directory contents
           fs.readdir("./newDir2", (err, files) => {

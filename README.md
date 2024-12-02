@@ -1,3 +1,8 @@
+# Node.js Components: 
+V8 Engine(C++ and JS), 
+Libuv lib (for I/O and Networking), 
+Process Execution by Event Driven Architecture.
+
 # Essetial Commands:
 ## Terminal Commands -
  1. pwd - Show the current directory path.
@@ -33,3 +38,31 @@
  6. Read Directory -	fs.readdirSync(),	fs.readdir()
  7. Delete Directory -	fs.rmdirSync(),	fs.rmdir()
  8. Check Stats -	fs.statSync(),	fs.stat()
+
+# Node.js Architecture and Working: 
+1. Start the Process -> 2. Insert into the Queue & Identify the Operation Type ->
+3. If Non-Blocking Execute it directly -> 4. If Blocking -> 5. Event Looping start ->
+## Node.js Process Components: 
+Main Thread(
+1. init project -> 
+2. register top level code -> 
+3. register required modules -> 
+4. Event Callbacks registration ->
+5. event loop starts (for cpu intensive tasks, it goes to thread pool)
+) and Threal Pool. 
+## Phases of Event Loop:
+The event loop is the core mechanism of Node.js, which manages all asynchronous operations. 
+It operates in multiple phases:
+1. Timers:
+Executes callbacks for setTimeout and setInterval.
+2. I/O Callbacks:
+Handles callbacks for completed I/O operations.
+3. Idle, Prepare:
+Internal use, mostly ignored by developers.
+4. Poll:
+Retrieves new I/O events and executes their callbacks.
+5. Check:
+Executes callbacks for setImmediate.
+6. Close Callbacks:
+Executes callbacks for closed sockets or other close events.
+

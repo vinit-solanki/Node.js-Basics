@@ -5,9 +5,15 @@
   "main": "args.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node starter.js",
-    "args": "node args.js"
+    "start": "node 02_starter.js",
+    "args": "node 01_args.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "colours": "^0.6.0-2",
+    "figlet": "^1.8.0",
+    "give-me-a-joke": "^0.5.1"
+  }
 }
