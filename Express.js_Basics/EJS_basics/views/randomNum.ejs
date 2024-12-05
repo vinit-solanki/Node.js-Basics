@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            background: #202020;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Number: <%= random %></h1>
+    <% if(random%2 === 0){ %>
+        <h2>It is an even number</h2>
+    <% } else{ %>
+        <h2>It is an odd number</h2>
+    <% } %>
+</body>
+</html>

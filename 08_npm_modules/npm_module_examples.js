@@ -2,7 +2,7 @@
 const jokes = require('give-me-a-joke');
 var colors = require('colors');
 jokes.getRandomDadJoke(function (joke){
-    console.log("Dad Joke:", joke.rainbow);    
+    console.log("Dad Joke:", joke.green);    
 })
 // cowsay can be used to give terminal output as a cow 
 const figlet = require('figlet');

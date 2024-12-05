@@ -1,5 +1,8 @@
+console.log("Hello", process.argv[2]);
 console.log("Hello World, this is a starter file!");
 console.log("CWD:", process.cwd());
+
+
 /* 
     In the package.json file the scripts contains where we can define script that can 
     run from the command line. For example, we can define a script to start the server 

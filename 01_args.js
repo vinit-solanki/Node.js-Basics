@@ -1,6 +1,3 @@
-const args = process.args;
-console.log(args); //undefined
-
 const argv = process.argv;
 console.log(argv); //['node', 'script.js']
 

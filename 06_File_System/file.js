@@ -3,7 +3,11 @@ const fs = require("fs");
 // While the async methods uses a callback function to operate
 // console.log(fs); // lists all the possible methods for fs
 
+// fs.readFileSync -> fs.stats -> mkdir -> stream -> writeFileSync ->
+// writeFile -> appendFile -> ..... -> fs.readFile 
+
 // 1. Reading:
+// *1
 console.log("Sync Read: ", fs.readFileSync("./example.txt", "utf-8"));
 fs.readFile("./example.txt", "utf-8", (err, result) => {
   if (err) {
@@ -16,7 +20,7 @@ fs.readFile("./example.txt", "utf-8", (err, result) => {
 // for large files use streams
 const stream = fs.createReadStream("./example.txt", "utf-8");
 stream.on("data", (chunck) => {
-  console.log(chunck);
+  console.log("Stream Read: ",chunck);
 });
 
 // 2. Writing:
@@ -54,6 +58,7 @@ fs.appendFile(
 fs.appendFileSync("./writeFile.txt", "\nThis is an appended line by sync");
 
 // 4. Stats of a file
+// *2
 fs.stat("./example.txt", (err, stats) => {
   if (err) {
     console.log(err);
@@ -115,7 +120,8 @@ fs.mkdir("./newDir2", (err) => {
               }
 
               // Delete the directory and its contents
-              fs.rmdir("./newDir2", { recursive: true, force: true }, (err) => {
+              // use 'rm' instead of 'rmdir'
+              fs.rm("./newDir2", { recursive: true, force: true }, (err) => {
                 if (err) {
                   console.log(err);
                 } else {
