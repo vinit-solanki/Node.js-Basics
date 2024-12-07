@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html,body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #202020;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            color: aliceblue;
+        }
+    
+    </style>
+</head>
+<body>
+    <main>
+        <ul>
+            <% for(let comment of comments){ %>
+                <li> <%=comment.username%>(<%= comment.id%>) ~ <%=comment.content%> </li>
+                <%}%>
+        </ul>
+        <a href="/">Home</a>
+        <a href=" /comments/new">Post Comment</a>
+    </main>
+</body>
+</html>

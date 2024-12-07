@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Comment</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    html,body{
+        width: 100vw;
+        height: 100vh;
+        background-color: #202020;
+        font-size: large;
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 400px;
+        height: 50px;
+        margin: 1rem;
+    }
+    button{
+        padding: 0.5rem;
+        border-radius: 1rem;
+        background-color: antiquewhite;
+        color: black;
+    }
+</style>
+<body>
+    <form action="/comments/new" method="post">
+        <section>
+            <label for="username">Username: </label>
+            <input name="username" id="username" type="text">
+        </section>
+        <section>
+            <label for="content">Content: </label>
+            <textarea name="content" id="content" type="text"></textarea>
+        </section>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Home</a>
+    <a href="/comments">Comments</a>
+</body>
+</html>
