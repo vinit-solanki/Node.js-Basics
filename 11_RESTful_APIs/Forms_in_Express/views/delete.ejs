@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #202020;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Delete A Comment</h2>
+    <ul>
+        <% for(let comment of comments){ %>
+          <li>
+            <strong><%= comment.username %>:</strong> <%= comment.content %>
+            <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+        <% } %>
+      </ul>
+      
+  </body>
+</html>
